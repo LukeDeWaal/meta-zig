@@ -18,10 +18,11 @@ def get_zig_target(d):
     return "-".join([arch, os, libc])
         
 ZIG_TARGET ?= "${@get_zig_target(d)}"
+ZIG_OPTIMIZE ?= "ReleaseSafe"
 
 zig_do_compile() {
     bbnote ${ZIG} build install "$@" -Dtarget=${ZIG_TARGET} ${ZIG_ARGS}
-    ${ZIG} build install "$@" -Dtarget=${ZIG_TARGET} ${ZIG_ARGS}
+    ${ZIG} build install "$@" -Dtarget=${ZIG_TARGET} -Doptimize=${ZIG_OPTIMIZE} ${ZIG_ARGS}
 }
 
 EXPORT_FUNCTIONS do_compile

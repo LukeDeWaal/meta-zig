@@ -5,7 +5,8 @@ LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=3da9cfbcb788c80a0384361b4de20420"
 
 SRC_URI = " \
-    file://src \
+    file://src/main.zig \
+    file://src/root.zig \
     file://build.zig \
     file://LICENSE \
     "
