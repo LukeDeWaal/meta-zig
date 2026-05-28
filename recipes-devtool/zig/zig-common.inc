@@ -13,7 +13,7 @@ inherit cmake
 EXTRA_OECMAKE = "-DCMAKE_BUILD_TYPE=Release"
 OECMAKE_GENERATOR = "Unix Makefiles"
 
-BBCLASSEXTEND = "native"
+BBCLASSEXTEND = "native nativesdk"
 
 do_compile() {
     make install
